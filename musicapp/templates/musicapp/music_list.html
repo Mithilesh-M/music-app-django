@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <button class="mybutton" onclick="location.href='';">Create Music</button>
+    <h1>Filter</h1>
+    <form method="get">
+        <table>
+        {{ filter.form.as_table }}
+        </table>
+        <input type="submit" />
+    </form>
+    <h1>Music List:</h1>
+    {% if object_list %}
+        <ul class="list-group">
+            {% for director in object_list %}
+                <li class="list-group-item" style="background-color:rgb(99, 153, 124);"><a href="">{{ director }}</a>
+                <br>
+                <button class="mybutton" onclick="location.href='';">Delete</button>
+                <button class="mybutton" onclick="location.href='';">Update</button></li>
+            {% endfor %}
+          </ul>
+          {% else %}
+            <p>There are no director in this app.</p>
+          {% endif %}
+
+{% endblock %}

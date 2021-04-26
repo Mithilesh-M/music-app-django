@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Music, Album, Band, Label, Genre
-
+from django_filters import views
+from .filters import MusicFilter
 
 def show_index(request):
     context = {
@@ -11,3 +12,8 @@ def show_index(request):
         'No_Of_Genre': Genre.objects.all().count(),
     }
     return render(request, 'musicapp/index.html', context)
+
+
+class MusicListView(views.FilterView):
+    filterset_class = MusicFilter
+    template_name = 'musicapp/music_list.html'
