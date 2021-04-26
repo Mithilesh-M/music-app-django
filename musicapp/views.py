@@ -36,3 +36,6 @@ class MusicUpdateView(generic.UpdateView):
 class MusicDeleteView(generic.DeleteView):
     model = Music
     success_url = reverse_lazy('music-list')
+
+class MusicDetailView(generic.DetailView):
+    model = Music

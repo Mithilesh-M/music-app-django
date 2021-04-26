@@ -1,0 +1,34 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+  <button style="border-radius: 50%;border-color: black;" onclick="location.href='{% url 'music-list' %}';">
+    <a href="{% url 'music-list' %}" style="color: green">
+    <i class="fa fa-arrow-left" onmouseover = "this.style.color = 'black'" onmouseout = "this.style.color = 'green'" ></i>
+    </a>
+  </button>
+  <button style="border-color: black;" onclick="location.href='{% url 'music-delete' music.id %}';">
+    Delete
+  </button>
+  <button style="border-color: black;" onclick="location.href='{% url 'music-update' music.id %}';">
+    Update
+  </button>
+  <br><br>
+  <h3>Music Detail</h3>
+  <p><strong>Title: </strong>{{ music.title }}</p>
+  <p><strong>Slug: </strong>{{ music.slug }}</p>
+  <p><strong>Album: </strong>{{ music.album }}</p>
+  <p><strong>Band: </strong>{{ music.band }}</p>
+<!--  <p><strong>Movies: </strong></p>-->
+<!--    {% if studio.movie_set.all %}-->
+<!--      <ul>-->
+<!--        {% for movie in studio.movie_set.all %}-->
+<!--          <li>{{ movie }}</li>-->
+<!--        {% endfor %}-->
+<!--      </ul>-->
+<!--    {% else %}-->
+<!--      No movie by this studio-->
+<!--    {% endif %}-->
+<!--  </p>-->
+
+{% endblock %}

@@ -17,7 +17,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-sm">
-                      <a href="">{{ music }}</a>
+                      <a href="{% url 'music-detail' music.id %}">{{ music }}</a>
                     </div>
                     <div class="col-sm">
                         <button class="mybutton" onclick="location.href='{% url 'music-delete' music.id %}';">Delete</button>
