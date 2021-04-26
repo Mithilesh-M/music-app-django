@@ -31,3 +31,8 @@ class MusicUpdateView(generic.UpdateView):
     model = Music
     fields = ['title', 'slug', 'album', 'band']
     success_url = reverse_lazy('music-list')
+
+
+class MusicDeleteView(generic.DeleteView):
+    model = Music
+    success_url = reverse_lazy('music-list')

@@ -20,7 +20,7 @@
                       <a href="">{{ music }}</a>
                     </div>
                     <div class="col-sm">
-                        <button class="mybutton" onclick="location.href='';">Delete</button>
+                        <button class="mybutton" onclick="location.href='{% url 'music-delete' music.id %}';">Delete</button>
                     </div>
                     <div class="col-sm">
                         <button class="mybutton" onclick="location.href='{% url 'music-update' music.id %}';">Update</button>
