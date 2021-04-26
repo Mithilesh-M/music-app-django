@@ -13,10 +13,21 @@
     {% if object_list %}
         <ul class="list-group">
             {% for director in object_list %}
-                <li class="list-group-item" style="background-color:rgb(99, 153, 124);"><a href="">{{ director }}</a>
-                <br>
-                <button class="mybutton" onclick="location.href='';">Delete</button>
-                <button class="mybutton" onclick="location.href='';">Update</button></li>
+            <li class="list-group-item" style="background-color:rgb(99, 153, 124);">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                      <a href="">{{ director }}</a>
+                    </div>
+                    <div class="col-sm">
+                        <button class="mybutton" onclick="location.href='';">Delete</button>
+                    </div>
+                    <div class="col-sm">
+                        <button class="mybutton" onclick="location.href='';">Update</button></li>
+                    </div>
+                  </div>
+                </div>
+            </li>
             {% endfor %}
           </ul>
           {% else %}
