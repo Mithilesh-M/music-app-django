@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1><strong>BookApp Summary:</strong></h1>
+    <br>
+    <ul class="list-group">
+      <li class="list-group-item" style="background-color:rgb(99, 153, 124);"><h5><strong>Total Music :</strong> {{ No_Of_Music }}</h5></li>
+      <li class="list-group-item" style="background-color:rgb(99, 153, 124);"><h5><strong>Total Band :</strong> {{ No_Of_Band }}</h5></li>
+      <li class="list-group-item" style="background-color:rgb(99, 153, 124);"><h5><strong>Total Label :</strong> {{ No_Of_Label }}</h5></li>
+      <li class="list-group-item" style="background-color:rgb(99, 153, 124);"><h5><strong>Total Album :</strong> {{ No_Of_Album }}</h5></li>
+      <li class="list-group-item" style="background-color:rgb(99, 153, 124);"><h5><strong>Total Genre :</strong> {{ No_Of_Genre }}</h5></li>
+    </ul>
+{% endblock %}
