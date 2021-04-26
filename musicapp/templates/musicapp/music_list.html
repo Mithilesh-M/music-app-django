@@ -12,18 +12,18 @@
     <h1>Music List:</h1>
     {% if object_list %}
         <ul class="list-group">
-            {% for director in object_list %}
+            {% for music in object_list %}
             <li class="list-group-item" style="background-color:rgb(99, 153, 124);">
                 <div class="container">
                   <div class="row">
                     <div class="col-sm">
-                      <a href="">{{ director }}</a>
+                      <a href="">{{ music }}</a>
                     </div>
                     <div class="col-sm">
                         <button class="mybutton" onclick="location.href='';">Delete</button>
                     </div>
                     <div class="col-sm">
-                        <button class="mybutton" onclick="location.href='';">Update</button></li>
+                        <button class="mybutton" onclick="location.href='{% url 'music-update' music.id %}';">Update</button>
                     </div>
                   </div>
                 </div>
@@ -31,7 +31,7 @@
             {% endfor %}
           </ul>
           {% else %}
-            <p>There are no director in this app.</p>
+            <p>There are no music in this app.</p>
           {% endif %}
 
 {% endblock %}
